@@ -8,6 +8,7 @@ package com.example.justjava;
  * in the project's AndroidManifest.xml file.
  **/
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -72,12 +73,18 @@ public class MainActivity extends AppCompatActivity
         return priceMessage;
     }
 
+    public void click(View view)
+    {
+        displayInt("vineet");
+    }
+
+
     /**
      * This method displays the given quantity value on the screen.
      */
     private void display(int number)
     {
-        TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
+        TextView quantityTextView = findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
 
@@ -85,7 +92,15 @@ public class MainActivity extends AppCompatActivity
      * This method displays the given text on the screen.
      */
     private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        TextView priceTextView = findViewById(R.id.price_text_view);
         priceTextView.setText(message);
+    }
+
+    public void displayInt(String msg)
+    {
+        TextView tv = findViewById(R.id.change_text_view);
+        tv.setText(msg);
+        tv.setAllCaps(true);
+        tv.setTextColor(Color.RED);
     }
 }

@@ -69,5 +69,17 @@
         android:onClick="submitOrder"
         android:text="order" />
 
+    <TextView
+        android:id="@+id/change_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name is vineet"
+        android:layout_marginTop="24dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click me!"
+        android:onClick="click"/>
 
 </LinearLayout>
